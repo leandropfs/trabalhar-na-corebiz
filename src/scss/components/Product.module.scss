@@ -1,0 +1,136 @@
+@import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
+
+.productItem {
+    width: 21.5rem;
+    max-width: 100%;
+    list-style: none;
+    transition: background .2s;
+
+    a {
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: var(--gray-200);
+    }
+}
+
+.productImage {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.productBadgeOffer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(43deg, rgba(255,255,255,0) 50%, var(--red-200) 50%);
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 900;
+    width: 8rem;
+    height: 7.2rem;
+    padding: 1.5rem 0 0 4rem;
+}
+
+.productName {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 1rem;
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--gray-500);
+        height: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+    }
+}
+
+.productRating {
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+
+    .productRatingOn {
+        @include ficon-before($icon-star-on, 1.2rem, var(--red-200));
+    }
+
+    .productRatingOff {
+        fill: red;
+        @include ficon-before($icon-star-off, 1.2rem, var(--red-200));
+    }
+}
+
+.productPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-old {
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-500);
+        font-size: 1.2rem;
+    }
+
+    &-price {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        padding: .2rem 0;
+        color: var(--black);
+        font-size: 1.8rem;
+        font-weight: 800;
+
+        big {
+            font-size: 1.8rem;
+        }
+    }
+
+    &-installments {
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-500);
+        font-size: 1.1rem;
+    }
+}
+
+.productAddToCart {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    .productButtonAddToCart {
+        width: 100%;
+        height: 3.6rem;
+    }
+}
+
+@include only-desktop() {
+    .productAddToCart {
+        visibility: hidden;
+    
+        .productButtonAddToCart {
+            max-width: 12.5rem;
+            height: 3.2rem;
+        }
+    }
+
+    .productItem:hover .productAddToCart {
+        visibility: visible;
+    }
+}

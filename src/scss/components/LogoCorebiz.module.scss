@@ -1,0 +1,15 @@
+@import '../mixins.scss';
+
+.logo {
+    order: 2;
+}
+
+@include only-desktop() { 
+    .logo {
+        order: unset;
+    }
+
+    .logo img {
+        fill: red;
+    }
+}

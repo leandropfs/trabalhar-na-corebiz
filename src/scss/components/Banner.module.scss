@@ -1,0 +1,19 @@
+@import '../mixins.scss';
+
+.bannerFull {
+
+    .bannerFullItem img{
+        width: 100%;
+        height: auto;
+    }
+
+    @include only-desktop() {
+        .bannerFullItem {
+            margin-left: calc((100vw - 1920px) / 2);
+        }
+
+        .bannerFullItem img{
+            width: 1920px;
+        }
+    }
+}

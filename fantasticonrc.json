@@ -1,0 +1,11 @@
+{
+    "name": "fantasticon",
+    "inputDir": "./src/assets/icons",
+    "outputDir": "./src/assets/fonts",
+    "fontTypes": ["ttf"],
+    "assetTypes": ["scss"],
+    "normalize": true,
+    "templates": {
+      "scss": "./src/scss/icons/icons-template.scss.hbs"
+    }
+}

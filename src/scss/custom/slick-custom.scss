@@ -1,0 +1,38 @@
+@import '../../assets/fonts/fantasticon.scss';
+
+body .slick-dots li {
+    margin: 0 1px;
+}
+
+body .slick-dots li button:before {
+    color: var(--gray-400);
+    opacity: 1;
+    font-size: 1rem;
+}
+
+body .slick-dots li.slick-active button:before {
+    color: var(--red-200);
+    opacity: 1;
+}
+
+body .slick-banner .slick-dots {
+    bottom: 35px;
+}
+
+body .slick-shelf .slick-slide > div {
+    display: flex;
+    justify-content: center;
+}
+
+body .slick-shelf .slick-dots {
+    position: static;
+    margin-top: 2rem;
+}
+
+body .slick-prev {
+    @include ficon-before($icon-left-arrow, 2.2rem, var(--black));
+}
+
+body .slick-next {
+    @include ficon-before($icon-right-arrow, 2.2rem, var(--black));
+}

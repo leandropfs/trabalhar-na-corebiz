@@ -1,0 +1,36 @@
+@import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
+
+.miniCart {
+    order: 3;
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        text-decoration: none;
+
+        @include ficon-before($icon-shopping-cart, 1.8rem, var(--black));
+
+        span {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--white);
+            background-color: var(--red-200);
+            display:  flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+@include only-desktop() { 
+    .miniCart {
+        order: unset;
+    }
+}

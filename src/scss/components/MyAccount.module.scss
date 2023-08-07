@@ -1,0 +1,32 @@
+@import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
+
+.myAccount {
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+    @include ficon-before($icon-hamburger, 2.21rem, var(--black));
+
+    a {
+        display: none;
+    }
+}
+
+@include only-desktop() {
+    .myAccount {
+        order: unset;
+        gap: .5rem;
+        margin-top: 0;
+        @include ficon-before($icon-customer, 1.8rem, var(--black));
+
+        a {
+            display: inline-block;
+            font-size: 1.3rem;
+            color: var(--gray-500);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+    }
+}

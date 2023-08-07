@@ -1,0 +1,110 @@
+@import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background-color: var(--black);
+    border-bottom: 9px solid var(--gray-300);
+}
+
+.footerContainer {
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+@include only-desktop() {
+    .footerContainer {
+        flex-direction: row;
+    }
+}
+
+.footer-location {
+    width: 100%;
+
+    .footer-location &-heading {
+
+        &::after {
+            width: 32px;
+            background-color: var(--white);
+        }
+    }
+}
+
+@include only-desktop() {
+    .footer-location {
+        width: auto;
+    }
+}
+
+.footer-location-content {
+    color: var(--white);
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    text-align: left;
+
+    address {
+        font-style: normal;
+    }
+}
+
+.footer-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 5rem 0 2.5rem 0;
+
+    a {
+        width: 19.5rem;
+        height: 3.8rem;
+        background-color: var(--white);
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.5rem 0 1.5rem;
+        gap: 1.8rem;
+        color: var(--black);
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-weight: 500;
+        text-decoration: none
+    }
+
+    &-mail {
+        @include ficon-before($icon-mail, 1.7rem, var(--black));
+    }
+
+    &-callcenter {
+        @include ficon-before($icon-callcenter, 1.7rem, var(--black));
+    }
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--white);
+        font-size: 1rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+}

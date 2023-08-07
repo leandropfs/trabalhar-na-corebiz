@@ -1,0 +1,61 @@
+// File generated automatically with Fantasticon lib.
+// Only edit it if you know what you are doing.
+// Template used is at src/sass/icons/icons-template.scss.hbs
+
+$fantasticon-font: "fantasticon";
+$fantasticon-font: "fantasticon";
+
+$fantasticon-map: (
+  "callcenter": "\f101",
+  "customer": "\f102",
+  "hamburger": "\f103",
+  "headset": "\f104",
+  "left-arrow": "\f105",
+  "mail": "\f106",
+  "right-arrow": "\f107",
+  "search": "\f108",
+  "shopping-cart": "\f109",
+  "star-off": "\f10a",
+  "star-on": "\f10b",
+);
+
+$icon-callcenter: "\f101";
+$icon-customer: "\f102";
+$icon-hamburger: "\f103";
+$icon-headset: "\f104";
+$icon-left-arrow: "\f105";
+$icon-mail: "\f106";
+$icon-right-arrow: "\f107";
+$icon-search: "\f108";
+$icon-shopping-cart: "\f109";
+$icon-star-off: "\f10a";
+$icon-star-on: "\f10b";
+
+
+@mixin ficon-before($icon, $size: 16px, $color: inherit) {
+	&::before {
+		display: inline-flex;
+		content: $icon;
+		font-size: $size;
+		font-family: $fantasticon-font;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		color: $color;
+		@content;
+	}
+}
+
+@mixin ficon-after($icon, $size: 16px, $color: inherit) {
+	&::after {
+		display: inline-flex;
+		content: $icon;
+		font-size: $size;
+		font-family: $fantasticon-font;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1;
+		color: $color;
+		@content;
+	}
+}

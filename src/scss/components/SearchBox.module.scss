@@ -1,0 +1,45 @@
+@import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
+
+.searchBox {
+    order: 4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &-fieldset {
+        border:  none;
+        border-bottom: 1px solid var(--gray-500);
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    &-searchInput {
+        width: 100%;
+        border: none;
+        height: 3rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-searchSubmit {
+        background: none;
+        border: none;
+        font-size: 0;
+        cursor: pointer;
+
+        &-icon {
+            @include ficon-before($icon-search, 1.8rem);
+        }
+    }
+}
+
+@include only-desktop() {
+    .searchBox {
+        order: unset;
+        padding: 0 1rem 0 5%;
+    }
+}
