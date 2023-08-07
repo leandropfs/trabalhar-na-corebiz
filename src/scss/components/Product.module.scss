@@ -20,7 +20,16 @@
     position: relative;
 
     img {
-        width: 100%;
+        width: 95%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+    }
+
+    @include only-desktop() {
+        img {
+            width: 100%;
+        }
     }
 }
 

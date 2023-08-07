@@ -1,27 +1,63 @@
-# React + TypeScript + Vite
+# Trabalhar na Corebiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center"><a href="https://delicate-speculoos-bb7a45.netlify.app/">Live Preview</a></h3>
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a href="https://reactjs.org/"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/react/react-original.svg" height="50px" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.typescriptlang.org/"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/typescript/typescript-original.svg" height="50px" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://en.wikipedia.org/wiki/CSS"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/css3/css3-plain.svg" height="50px" /></a>
 
-## Expanding the ESLint configuration
+## Description
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Project developed for skill testing for the Front-End Developer position at Corebiz.
 
-- Configure the top-level `parserOptions` property like this:
+The project was developed using React + TypeScript.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Usage
+
+Install all dependencies using the following script:
+
+```bash
+$ yarn install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To preview the project:
+
+```bash
+$ yarn preview
+```
+
+To enter on dev mode:
+
+```bash
+$ yarn dev
+```
+
+To build project:
+
+```bash
+$ yarn build
+```
+
+## Tecnologies
+
+This project was developed using the following technologies.
+
+- [Vite](https://vitejs.dev/) as a module packager.
+- [SASS](https://www.npmjs.com/package/node-sass) as stylesheet preprocessor.
+- [Fantasticon](https://www.npmjs.com/package/fantasticon) for compile icons to ttf font.
+- [Axios](https://www.npmjs.com/package/react-axios) for fetch and post data.
+- [Slick Slider](https://kenwheeler.github.io/slick/) for carousel.
+
+## Screenshots
+
+### Desktop
+
+<img src="./public/images/preview/preview-desktop.png" width="600px" />
+
+### Mobile
+
+<img src="./public/images/preview/preview-mobile.png" width="400px" />
