@@ -91,6 +91,12 @@
     }
 }
 
+@include only-desktop() {
+    .footer-contact {
+        padding: 0;
+    }
+}
+
 .footer-copyright {
     display: flex;
     align-items: center;

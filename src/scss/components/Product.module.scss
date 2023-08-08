@@ -18,12 +18,14 @@
 
 .productImage {
     position: relative;
+    background-color: var(--white);
 
     img {
         width: 95%;
         height: auto;
         aspect-ratio: 1 / 1;
         margin: 0 auto;
+        object-fit: contain;
     }
 
     @include only-desktop() {

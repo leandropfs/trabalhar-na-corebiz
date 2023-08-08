@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { api } from "../services/api";
 
 import styles from '../scss/components/Newsletter.module.scss'
-import { useState } from "react";
-import axios from "axios";
 
 function Newsletter () {
 
@@ -11,7 +11,7 @@ function Newsletter () {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
 
     const onSubmit = handleSubmit((data) => {
-        axios.post('https://fakestoreapi.com/users', data)
+        api.post('/users', data)
         .then(function () {
             setIsSent(true)
         })

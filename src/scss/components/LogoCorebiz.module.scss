@@ -4,12 +4,16 @@
     order: 2;
 }
 
+.logo img {
+    height: 2.5rem;
+}
+
 @include only-desktop() { 
     .logo {
         order: unset;
     }
 
     .logo img {
-        fill: red;
+        height: auto;
     }
 }

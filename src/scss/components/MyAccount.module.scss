@@ -7,7 +7,7 @@
     align-items: center;
     gap: .5rem;
     margin-top: .5rem;
-    @include ficon-before($icon-hamburger, 2.21rem, var(--black));
+    @include ficon-before($icon-hamburger, 1.6rem, var(--black));
 
     a {
         display: none;

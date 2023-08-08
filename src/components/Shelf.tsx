@@ -1,39 +1,19 @@
 import { useEffect, useState } from "react"
 import Slider from "react-slick"
-import axios from "axios"
+import { api } from "../services/api"
+import { slickShelf } from "../services/settings"
 
 import Product from './Product'
 import { ProductType } from "../typings/Product"
 
 import styles from '../scss/components/Shelf.module.scss'
 
-
 function Shelf () {
-
-    var settings = {
-        className: "slick-shelf",
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    dots: true,
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                },
-            },
-        ]
-    }
 
     const [products, setProducts] = useState([] as ProductType[])
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products')
+        api.get('/products')
         .then(function (response) {
             setProducts(response.data)
         })
@@ -50,7 +30,7 @@ function Shelf () {
                 </header>
                 <main className={styles.shelfProducts}>
                     <ul className={styles.shelfProductsList}>
-                        <Slider {...settings}>
+                        <Slider {...slickShelf}>
 
                             {products.map((item: ProductType) => (
                                 <Product key={item.id} product={item} />

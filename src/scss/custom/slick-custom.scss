@@ -1,4 +1,5 @@
 @import '../../assets/fonts/fantasticon.scss';
+@import '../mixins.scss';
 
 body .slick-dots li {
     margin: 0 1px;
@@ -16,7 +17,13 @@ body .slick-dots li.slick-active button:before {
 }
 
 body .slick-banner .slick-dots {
-    bottom: 35px;
+    bottom: 12px;
+}
+
+@include only-desktop() {
+    body .slick-banner .slick-dots {
+        bottom: 35px;
+    }
 }
 
 body .slick-shelf .slick-slide > div {
@@ -30,9 +37,13 @@ body .slick-shelf .slick-dots {
 }
 
 body .slick-prev {
+    left: 35px;
+    z-index: 99;
     @include ficon-before($icon-left-arrow, 2.2rem, var(--black));
 }
 
 body .slick-next {
+    right: 35px;
+    z-index: 99;
     @include ficon-before($icon-right-arrow, 2.2rem, var(--black));
 }
